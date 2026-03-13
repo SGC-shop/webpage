@@ -1,0 +1,525 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <meta name="description"
+  content="SHREE GANESH COLLECTION — Ready-made apparel for all genders and ages. Casual, formal, sports, undergarments, traditional, festival wear, school uniforms, jerseys, caps, and bulk orders." />
+ <title>SHREE GANESH COLLECTION</title>
+
+ <!-- No-build styling: Tailwind via CDN -->
+ <script src="https://cdn.tailwindcss.com"></script>
+ <script>
+  tailwind.config = {
+   darkMode: "class",
+   theme: {
+    extend: {
+     colors: {
+      brand: {
+       50: "#faf5ff",
+       100: "#f3e8ff",
+       200: "#e9d5ff",
+       300: "#d8b4fe",
+       400: "#c084fc",
+       500: "#a855f7",
+       600: "#9333ea",
+       700: "#7e22ce",
+       800: "#6b21a8",
+       900: "#581c87",
+      },
+     },
+    },
+   },
+  };
+ </script>
+
+ <style>
+  /* Small, intentional styles beyond Tailwind */
+  .glass {
+   background: rgba(17, 24, 39, 0.55);
+   backdrop-filter: blur(10px);
+  }
+ </style>
+</head>
+
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100">
+ <!-- Top bar -->
+ <div class="border-b border-slate-200/70 bg-white/80 dark:border-white/10 dark:bg-slate-950/80">
+  <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-2 text-sm">
+   <div class="flex items-center gap-3">
+    <span class="inline-flex h-2 w-2 rounded-full bg-emerald-500"></span>
+    <span class="text-slate-700 dark:text-slate-200" id="topbar-line">Ready-made clothing • Bulk orders available</span>
+   </div>
+   <div class="hidden items-center gap-4 sm:flex">
+    <a id="topbar-phone" class="text-slate-700 hover:text-slate-900 dark:text-slate-200 dark:hover:text-white"
+     href="#">Call</a>
+    <a id="topbar-whatsapp" class="text-slate-700 hover:text-slate-900 dark:text-slate-200 dark:hover:text-white"
+     href="#" target="_blank" rel="noreferrer">WhatsApp</a>
+    <a id="topbar-maps" class="text-slate-700 hover:text-slate-900 dark:text-slate-200 dark:hover:text-white" href="#"
+     target="_blank" rel="noreferrer">Directions</a>
+   </div>
+  </div>
+ </div>
+
+ <!-- Header -->
+ <header
+  class="sticky top-0 z-40 border-b border-slate-200/70 bg-white/80 backdrop-blur dark:border-white/10 dark:bg-slate-950/80">
+  <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
+   <a href="#home" class="group flex items-center gap-3">
+    <div class="grid h-10 w-10 place-items-center rounded-xl bg-brand-600/15 ring-1 ring-brand-600/20">
+     <span class="text-lg font-black tracking-tight text-brand-700">SG</span>
+    </div>
+    <div class="leading-tight">
+     <div class="text-sm font-semibold text-slate-600 dark:text-slate-200">Retail Apparel Store</div>
+     <div class="text-base font-black tracking-wide">SHREE GANESH COLLECTION</div>
+    </div>
+   </a>
+
+   <nav class="hidden items-center gap-6 text-sm sm:flex">
+    <a class="text-slate-700 hover:text-slate-900 dark:text-slate-200 dark:hover:text-white" href="#about">About</a>
+    <a class="text-slate-700 hover:text-slate-900 dark:text-slate-200 dark:hover:text-white" href="#offers">Offers</a>
+    <a class="text-slate-700 hover:text-slate-900 dark:text-slate-200 dark:hover:text-white"
+     href="#products">Products</a>
+    <a class="text-slate-700 hover:text-slate-900 dark:text-slate-200 dark:hover:text-white" href="#order">Order</a>
+    <a class="text-slate-700 hover:text-slate-900 dark:text-slate-200 dark:hover:text-white" href="#contact">Contact</a>
+   </nav>
+
+   <div class="flex items-center gap-2">
+    <div
+     class="hidden items-center gap-1 rounded-xl bg-white/70 px-1 py-1 ring-1 ring-slate-200/70 backdrop-blur sm:flex dark:bg-white/5 dark:ring-white/10">
+     <button id="theme-system" type="button"
+      class="rounded-lg px-3 py-2 text-xs font-semibold text-slate-700 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-white/10">
+      System
+     </button>
+     <button id="theme-light" type="button"
+      class="rounded-lg px-3 py-2 text-xs font-semibold text-slate-700 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-white/10">
+      Light
+     </button>
+     <button id="theme-dark" type="button"
+      class="rounded-lg px-3 py-2 text-xs font-semibold text-slate-700 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-white/10">
+      Dark
+     </button>
+    </div>
+    <a id="header-cta" href="#order"
+     class="inline-flex items-center justify-center rounded-xl bg-brand-600 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-brand-600/20 hover:bg-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-400/60">
+     Order now
+    </a>
+   </div>
+  </div>
+ </header>
+
+ <!-- Hero -->
+ <section id="home" class="relative overflow-hidden">
+  <div class="absolute inset-0 -z-10">
+   <div
+    class="absolute inset-0 bg-gradient-to-b from-brand-200/70 via-white to-slate-50 dark:from-brand-600/25 dark:via-slate-950 dark:to-slate-950">
+   </div>
+   <div
+    class="absolute -top-24 left-1/2 h-72 w-[44rem] -translate-x-1/2 rounded-full bg-brand-400/30 blur-3xl dark:bg-brand-500/15">
+   </div>
+   <div class="absolute top-10 left-10 h-64 w-64 rounded-full bg-emerald-400/20 blur-3xl dark:bg-emerald-500/10">
+   </div>
+  </div>
+
+  <div class="mx-auto max-w-6xl px-4 py-14 sm:py-20">
+   <div class="grid items-center gap-10 lg:grid-cols-2">
+    <div>
+     <div
+      class="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-xs text-slate-700 ring-1 ring-slate-200/70 shadow-sm dark:bg-white/5 dark:text-slate-200 dark:ring-white/10">
+      <span class="font-semibold text-brand-700 dark:text-brand-200">All ages</span>
+      <span class="text-slate-300">•</span>
+      <span>All genders</span>
+      <span class="text-slate-300">•</span>
+      <span>Retail & bulk orders</span>
+     </div>
+     <h1 class="mt-5 text-3xl font-black tracking-tight sm:text-5xl">
+      Everyday essentials to festival fits — all in one place.
+     </h1>
+     <p class="mt-4 max-w-xl text-slate-700 dark:text-slate-200">
+      Casual wear, formal wear, sports wear, undergarments, traditional wear, festival-specific clothes, school
+      uniforms, jerseys, and caps. Easy ordering via WhatsApp and other platforms.
+     </p>
+     <div class="mt-7 flex flex-wrap gap-3">
+      <a href="#products"
+       class="inline-flex items-center justify-center rounded-xl bg-white px-5 py-3 text-sm font-semibold text-slate-950 hover:bg-slate-100 dark:bg-white dark:text-slate-950 dark:hover:bg-slate-100">
+       Browse products
+      </a>
+      <a id="hero-whatsapp" href="#order"
+       class="inline-flex items-center justify-center rounded-xl bg-emerald-500 px-5 py-3 text-sm font-semibold text-emerald-950 hover:bg-emerald-400"
+       target="_blank" rel="noreferrer">
+       Order on WhatsApp
+      </a>
+      <a href="#offers"
+       class="inline-flex items-center justify-center rounded-xl bg-white px-5 py-3 text-sm font-semibold text-slate-900 ring-1 ring-slate-200/80 hover:bg-slate-50 dark:bg-white/5 dark:text-white dark:ring-white/10 dark:hover:bg-white/10">
+       View offers
+      </a>
+     </div>
+
+     <div class="mt-10 grid gap-3 sm:grid-cols-3">
+      <div class="rounded-2xl bg-white p-4 ring-1 ring-slate-200/70 shadow-sm dark:bg-white/5 dark:ring-white/10">
+       <div class="text-xs text-slate-500 dark:text-slate-300">Categories</div>
+       <div class="mt-1 text-lg font-bold" id="stat-categories">—</div>
+      </div>
+      <div class="rounded-2xl bg-white p-4 ring-1 ring-slate-200/70 shadow-sm dark:bg-white/5 dark:ring-white/10">
+       <div class="text-xs text-slate-500 dark:text-slate-300">Products listed</div>
+       <div class="mt-1 text-lg font-bold" id="stat-products">—</div>
+      </div>
+      <div class="rounded-2xl bg-white p-4 ring-1 ring-slate-200/70 shadow-sm dark:bg-white/5 dark:ring-white/10">
+       <div class="text-xs text-slate-500 dark:text-slate-300">Bulk orders</div>
+       <div class="mt-1 text-lg font-bold">Available</div>
+      </div>
+     </div>
+    </div>
+
+    <div class="relative">
+     <div
+      class="absolute -inset-4 -z-10 rounded-[2rem] bg-gradient-to-tr from-brand-400/35 via-emerald-400/25 to-white blur-2xl">
+     </div>
+     <div class="rounded-[2rem] bg-white p-6 ring-1 ring-slate-200/70 shadow-sm dark:bg-white/5 dark:ring-white/10">
+      <div class="flex items-center justify-between">
+       <div>
+        <div class="text-xs text-slate-500 dark:text-slate-300">Today’s highlight</div>
+        <div class="mt-1 text-xl font-black" id="highlight-title">Loading…</div>
+       </div>
+       <span
+        class="rounded-full bg-brand-600/15 px-3 py-1 text-xs font-semibold text-brand-800 ring-1 ring-brand-600/20">New</span>
+      </div>
+      <p class="mt-3 text-sm text-slate-700 dark:text-slate-200" id="highlight-desc">Fetching latest offers and product
+       updates…</p>
+      <div class="mt-5 rounded-2xl bg-slate-50 p-4 ring-1 ring-slate-200/70 dark:bg-slate-950/50 dark:ring-white/10">
+       <div class="flex flex-wrap gap-2 text-xs" id="highlight-tags"></div>
+      </div>
+      <div class="mt-6 flex flex-wrap gap-3">
+       <a href="#offers"
+        class="inline-flex items-center justify-center rounded-xl bg-brand-600 px-4 py-2 text-sm font-semibold text-white hover:bg-brand-500">
+        See offers
+       </a>
+       <a href="#contact"
+        class="inline-flex items-center justify-center rounded-xl bg-white px-4 py-2 text-sm font-semibold text-slate-900 ring-1 ring-slate-200/80 hover:bg-slate-50 dark:bg-white/5 dark:text-white dark:ring-white/10 dark:hover:bg-white/10">
+        Contact store
+       </a>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </section>
+
+ <!-- About -->
+ <section id="about" class="border-t border-slate-200/70 bg-slate-50 dark:border-white/10 dark:bg-slate-950">
+  <div class="mx-auto max-w-6xl px-4 py-14">
+   <div class="grid gap-10 lg:grid-cols-2 lg:items-start">
+    <div>
+     <h2 class="text-2xl font-black tracking-tight sm:text-3xl">About us</h2>
+     <p class="mt-3 text-slate-700 dark:text-slate-200" id="about-text">
+      <!-- Injected from config -->
+     </p>
+     <div class="mt-6 grid gap-3 sm:grid-cols-2">
+      <div class="rounded-2xl bg-white p-5 ring-1 ring-slate-200/70 shadow-sm dark:bg-white/5 dark:ring-white/10">
+       <div class="text-xs text-slate-600 dark:text-slate-300">What we sell</div>
+       <div class="mt-2 text-sm text-slate-700 dark:text-slate-200">
+        Casual, formal, sports, undergarments, traditional & festival wear, school uniforms, jerseys & caps.
+       </div>
+      </div>
+      <div class="rounded-2xl bg-white p-5 ring-1 ring-slate-200/70 shadow-sm dark:bg-white/5 dark:ring-white/10">
+       <div class="text-xs text-slate-600 dark:text-slate-300">Bulk orders</div>
+       <div class="mt-2 text-sm text-slate-700 dark:text-slate-200">
+        Uniforms, teams, events, shops, and institutions — share sizes & quantities and we’ll assist.
+       </div>
+      </div>
+     </div>
+    </div>
+
+    <div class="rounded-[2rem] bg-white p-6 ring-1 ring-slate-200/70 shadow-sm dark:bg-white/5 dark:ring-white/10">
+     <div class="text-xs text-slate-600 dark:text-slate-300">Store details</div>
+     <div class="mt-4 space-y-3 text-sm">
+      <div class="flex items-start justify-between gap-4">
+       <div class="text-slate-600 dark:text-slate-300">Store name</div>
+       <div class="text-right font-semibold text-slate-900 dark:text-slate-100">SHREE GANESH COLLECTION</div>
+      </div>
+      <div class="flex items-start justify-between gap-4">
+       <div class="text-slate-600 dark:text-slate-300">Address</div>
+       <div class="text-right font-semibold text-slate-900 dark:text-slate-100" id="store-address">—</div>
+      </div>
+      <div class="flex items-start justify-between gap-4">
+       <div class="text-slate-600 dark:text-slate-300">Hours</div>
+       <div class="text-right font-semibold text-slate-900 dark:text-slate-100" id="store-hours">—</div>
+      </div>
+      <div class="flex items-start justify-between gap-4">
+       <div class="text-slate-600 dark:text-slate-300">Phone</div>
+       <a
+        class="text-right font-semibold text-slate-900 hover:text-brand-700 dark:text-slate-100 dark:hover:text-brand-200"
+        id="store-phone" href="#">—</a>
+      </div>
+      <div class="flex items-start justify-between gap-4">
+       <div class="text-slate-600 dark:text-slate-300">WhatsApp</div>
+       <a
+        class="text-right font-semibold text-slate-900 hover:text-emerald-700 dark:text-slate-100 dark:hover:text-emerald-200"
+        id="store-whatsapp" href="#" target="_blank" rel="noreferrer">—</a>
+      </div>
+     </div>
+     <div class="mt-6 flex flex-wrap gap-3">
+      <a id="about-directions" href="#" target="_blank" rel="noreferrer"
+       class="inline-flex items-center justify-center rounded-xl bg-white px-4 py-2 text-sm font-semibold text-slate-900 ring-1 ring-slate-200/80 hover:bg-slate-50 dark:bg-white/5 dark:text-white dark:ring-white/10 dark:hover:bg-white/10">
+       Get directions
+      </a>
+      <a href="#contact"
+       class="inline-flex items-center justify-center rounded-xl bg-brand-600 px-4 py-2 text-sm font-semibold text-white hover:bg-brand-500">
+       Contact us
+      </a>
+     </div>
+    </div>
+   </div>
+  </div>
+ </section>
+
+ <!-- Offers -->
+ <section id="offers" class="border-t border-slate-200/70 bg-slate-50 dark:border-white/10 dark:bg-slate-950">
+  <div class="mx-auto max-w-6xl px-4 py-14">
+   <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+    <div>
+     <h2 class="text-2xl font-black tracking-tight sm:text-3xl">Offers & sales</h2>
+     <p class="mt-2 max-w-2xl text-slate-700 dark:text-slate-200">
+      Seasonal discounts, festival specials, and clearance deals. Update anytime in <span
+       class="font-mono">data/offers.json</span>.
+     </p>
+    </div>
+    <div class="text-sm text-slate-600 dark:text-slate-300" id="offers-updated">Updated: —</div>
+   </div>
+
+   <div class="mt-8 grid gap-4 lg:grid-cols-3" id="offers-grid">
+    <!-- Offer cards injected here -->
+   </div>
+  </div>
+ </section>
+
+ <!-- Products -->
+ <section id="products" class="border-t border-slate-200/70 bg-slate-50 dark:border-white/10 dark:bg-slate-950">
+  <div class="mx-auto max-w-6xl px-4 py-14">
+   <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+    <div>
+     <h2 class="text-2xl font-black tracking-tight sm:text-3xl">Product listing</h2>
+     <p class="mt-2 max-w-2xl text-slate-700 dark:text-slate-200">
+      Browse by category, search by name, and tap “Order” to request via WhatsApp or other platforms.
+     </p>
+    </div>
+    <div class="text-sm text-slate-600 dark:text-slate-300">
+     Updating products is simple: edit <span class="font-mono">data/products.json</span>.
+    </div>
+   </div>
+
+   <div
+    class="mt-8 grid gap-4 rounded-2xl bg-white p-4 ring-1 ring-slate-200/70 sm:grid-cols-12 sm:items-center dark:bg-white/5 dark:ring-white/10">
+    <div class="sm:col-span-5">
+     <label class="text-xs text-slate-600 dark:text-slate-300" for="search">Search</label>
+     <input id="search" type="search" placeholder="e.g. shirt, uniform, kurta…"
+      class="mt-1 w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-400/60 dark:border-white/10 dark:bg-slate-950/60 dark:text-white dark:placeholder:text-slate-400" />
+    </div>
+    <div class="sm:col-span-4">
+     <label class="text-xs text-slate-600 dark:text-slate-300" for="category">Category</label>
+     <select id="category"
+      class="mt-1 w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-brand-400/60 dark:border-white/10 dark:bg-slate-950/60 dark:text-white">
+      <option value="all">All categories</option>
+     </select>
+    </div>
+    <div class="sm:col-span-3">
+     <label class="text-xs text-slate-600 dark:text-slate-300" for="audience">For</label>
+     <select id="audience"
+      class="mt-1 w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-brand-400/60 dark:border-white/10 dark:bg-slate-950/60 dark:text-white">
+      <option value="all">Everyone</option>
+      <option value="men">Men</option>
+      <option value="women">Women</option>
+      <option value="kids">Kids</option>
+      <option value="unisex">Unisex</option>
+     </select>
+    </div>
+   </div>
+
+   <div class="mt-6 flex items-center justify-between text-sm text-slate-600 dark:text-slate-300">
+    <div>
+     Showing <span class="font-semibold text-slate-900 dark:text-slate-100" id="results-count">0</span> items
+    </div>
+    <button id="reset-filters"
+     class="rounded-xl bg-white px-4 py-2 font-semibold text-slate-900 ring-1 ring-slate-200/80 hover:bg-slate-50 dark:bg-white/5 dark:text-white dark:ring-white/10 dark:hover:bg-white/10"
+     type="button">
+     Reset
+    </button>
+   </div>
+
+   <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3" id="products-grid">
+    <!-- Product cards injected here -->
+   </div>
+
+   <div
+    class="mt-10 rounded-2xl bg-gradient-to-r from-brand-100 via-white to-emerald-100 p-6 ring-1 ring-slate-200/70 shadow-sm dark:from-brand-500/20 dark:via-white/5 dark:to-emerald-500/10 dark:ring-white/10">
+    <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+     <div>
+      <div class="text-xs text-slate-600 dark:text-slate-300">Bulk orders</div>
+      <div class="mt-1 text-lg font-black">Need uniforms, jerseys, or festival wear in quantity?</div>
+      <div class="mt-1 text-sm text-slate-700 dark:text-slate-200">Message us your sizes, quantities, and delivery
+       timeline.</div>
+     </div>
+     <a id="bulk-whatsapp" href="#order" target="_blank" rel="noreferrer"
+      class="inline-flex items-center justify-center rounded-xl bg-emerald-500 px-5 py-3 text-sm font-semibold text-emerald-950 hover:bg-emerald-400">
+      WhatsApp bulk enquiry
+     </a>
+    </div>
+   </div>
+  </div>
+ </section>
+
+ <!-- Order -->
+ <section id="order" class="border-t border-slate-200/70 bg-white dark:border-white/10 dark:bg-slate-950">
+  <div class="mx-auto max-w-6xl px-4 py-14">
+   <div class="grid gap-8 lg:grid-cols-2">
+    <div>
+     <h2 class="text-2xl font-black tracking-tight sm:text-3xl">Order using 3rd‑party apps / websites</h2>
+     <p class="mt-2 max-w-xl text-slate-700 dark:text-slate-200">
+      We keep ordering simple — no login needed. Tap a button below to order or request availability.
+     </p>
+
+     <div class="mt-6 grid gap-3 sm:grid-cols-2" id="order-links">
+      <!-- Links injected here -->
+     </div>
+
+     <div class="mt-6 rounded-2xl bg-slate-50 p-5 ring-1 ring-slate-200/70 dark:bg-white/5 dark:ring-white/10">
+      <div class="text-sm font-semibold">Quick order message template</div>
+      <p class="mt-2 text-sm text-slate-700 dark:text-slate-200">
+       Copy-paste this on WhatsApp/Instagram with the item name and size.
+      </p>
+      <pre id="order-template"
+       class="mt-3 whitespace-pre-wrap rounded-xl bg-white p-4 text-sm text-slate-900 ring-1 ring-slate-200/70 dark:bg-slate-950/60 dark:text-slate-100 dark:ring-white/10">
+      </pre>
+      <button id="copy-template" type="button"
+       class="mt-3 inline-flex items-center justify-center rounded-xl bg-white px-4 py-2 text-sm font-semibold text-slate-900 ring-1 ring-slate-200/80 hover:bg-slate-50 dark:bg-white/5 dark:text-white dark:ring-white/10 dark:hover:bg-white/10">
+       Copy template
+      </button>
+      <div class="mt-2 text-xs text-slate-500 dark:text-slate-400" id="copy-status"></div>
+     </div>
+    </div>
+
+    <div
+     class="rounded-[2rem] bg-gradient-to-b from-brand-100 via-white to-emerald-50 p-1 ring-1 ring-slate-200/70 shadow-sm dark:from-brand-500/20 dark:via-white/5 dark:to-emerald-500/10 dark:ring-white/10">
+     <div class="rounded-[2rem] bg-white p-6 dark:bg-slate-950">
+      <div class="text-xs text-slate-600 dark:text-slate-300">How it works</div>
+      <ol class="mt-3 space-y-3 text-sm text-slate-700 dark:text-slate-200">
+       <li class="rounded-xl bg-white p-4 ring-1 ring-slate-200/70 dark:bg-white/5 dark:ring-white/10">
+        <div class="font-semibold text-slate-900 dark:text-white">1) Pick an item</div>
+        <div class="mt-1">From the product listing, tap “Order” on the item you like.</div>
+       </li>
+       <li class="rounded-xl bg-white p-4 ring-1 ring-slate-200/70 dark:bg-white/5 dark:ring-white/10">
+        <div class="font-semibold text-slate-900 dark:text-white">2) Message us</div>
+        <div class="mt-1">We confirm availability, sizes, price range, and delivery/pickup.</div>
+       </li>
+       <li class="rounded-xl bg-white p-4 ring-1 ring-slate-200/70 dark:bg-white/5 dark:ring-white/10">
+        <div class="font-semibold text-slate-900 dark:text-white">3) Receive your order</div>
+        <div class="mt-1">In-store pickup or delivery options (as available) — including bulk orders.</div>
+       </li>
+      </ol>
+      <div
+       class="mt-6 rounded-2xl bg-brand-50 p-5 ring-1 ring-brand-200/60 dark:bg-brand-600/15 dark:ring-brand-500/25">
+       <div class="text-sm font-semibold text-brand-900 dark:text-brand-100">Tip</div>
+       <div class="mt-1 text-sm text-slate-700 dark:text-slate-200">
+        Add your size and preferred color in the message to speed things up.
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </section>
+
+ <!-- Contact -->
+ <section id="contact" class="border-t border-slate-200/70 bg-white dark:border-white/10 dark:bg-slate-950">
+  <div class="mx-auto max-w-6xl px-4 py-14">
+   <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+    <div>
+     <h2 class="text-2xl font-black tracking-tight sm:text-3xl">Contact us</h2>
+     <p class="mt-2 max-w-2xl text-slate-700 dark:text-slate-200">
+      Reach us on phone/WhatsApp, or visit the store. No login, no forms that need management.
+     </p>
+    </div>
+    <div class="text-sm text-slate-600 dark:text-slate-300">For updates, just edit JSON files in <span
+      class="font-mono">data/</span>.</div>
+   </div>
+
+   <div class="mt-8 grid gap-4 lg:grid-cols-3">
+    <div class="rounded-2xl bg-slate-50 p-6 ring-1 ring-slate-200/70 dark:bg-white/5 dark:ring-white/10">
+     <div class="text-sm font-semibold">Call</div>
+     <div class="mt-2 text-slate-700 dark:text-slate-200">Quick questions, sizes, availability.</div>
+     <a id="contact-phone"
+      class="mt-4 inline-flex w-full items-center justify-center rounded-xl bg-white px-4 py-3 text-sm font-semibold text-slate-950 hover:bg-slate-100 dark:bg-white dark:text-slate-950 dark:hover:bg-slate-100"
+      href="#">
+      Call now
+     </a>
+    </div>
+
+    <div class="rounded-2xl bg-slate-50 p-6 ring-1 ring-slate-200/70 dark:bg-white/5 dark:ring-white/10">
+     <div class="text-sm font-semibold">WhatsApp</div>
+     <div class="mt-2 text-slate-700 dark:text-slate-200">Send item name + size. We’ll confirm.</div>
+     <a id="contact-whatsapp"
+      class="mt-4 inline-flex w-full items-center justify-center rounded-xl bg-emerald-500 px-4 py-3 text-sm font-semibold text-emerald-950 hover:bg-emerald-400"
+      href="#" target="_blank" rel="noreferrer">
+      Message on WhatsApp
+     </a>
+    </div>
+
+    <div class="rounded-2xl bg-slate-50 p-6 ring-1 ring-slate-200/70 dark:bg-white/5 dark:ring-white/10">
+     <div class="text-sm font-semibold">Directions</div>
+     <div class="mt-2 text-slate-700 dark:text-slate-200">Open location in Google Maps.</div>
+     <a id="contact-maps"
+      class="mt-4 inline-flex w-full items-center justify-center rounded-xl bg-brand-600 px-4 py-3 text-sm font-semibold text-white hover:bg-brand-500"
+      href="#" target="_blank" rel="noreferrer">
+      Get directions
+     </a>
+    </div>
+   </div>
+
+   <div class="mt-8 rounded-2xl bg-slate-50 p-6 ring-1 ring-slate-200/70 dark:bg-white/5 dark:ring-white/10">
+    <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+     <div>
+      <div class="text-sm font-semibold">Prefer email?</div>
+      <div class="mt-1 text-sm text-slate-700 dark:text-slate-200">We can also take enquiries by email (optional).</div>
+     </div>
+     <a id="contact-email" href="#"
+      class="inline-flex items-center justify-center rounded-xl bg-white px-5 py-3 text-sm font-semibold text-slate-900 ring-1 ring-slate-200/80 hover:bg-slate-50 dark:bg-white/5 dark:text-white dark:ring-white/10 dark:hover:bg-white/10">
+      Email us
+     </a>
+    </div>
+   </div>
+  </div>
+ </section>
+
+ <!-- Footer -->
+ <footer class="border-t border-slate-200/70 bg-white dark:border-white/10 dark:bg-slate-950">
+  <div class="mx-auto max-w-6xl px-4 py-10">
+   <div class="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+    <div class="text-sm text-slate-600 dark:text-slate-300">
+     <div class="font-semibold text-slate-900 dark:text-slate-100">SHREE GANESH COLLECTION</div>
+     <div class="mt-1">Ready-made clothes • Retail & bulk orders</div>
+    </div>
+    <div class="flex flex-wrap gap-4 text-sm">
+     <a class="text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white" href="#about">About</a>
+     <a class="text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white" href="#offers">Offers</a>
+     <a class="text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white"
+      href="#products">Products</a>
+     <a class="text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white" href="#order">Order</a>
+     <a class="text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white"
+      href="#contact">Contact</a>
+    </div>
+   </div>
+   <div
+    class="mt-8 flex flex-col gap-2 border-t border-slate-200/70 pt-6 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between dark:border-white/10 dark:text-slate-400">
+    <div>© <span id="year"></span> SHREE GANESH COLLECTION. All rights reserved.</div>
+    <div>
+     Site is static (no server). Update products/offers via <span class="font-mono">data/*.json</span>.
+    </div>
+   </div>
+  </div>
+ </footer>
+
+ <script src="./script.js"></script>
+</body>
+
+</html>

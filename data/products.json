@@ -1,0 +1,108 @@
+{
+  "products": [
+    {
+      "id": "casual-tshirt",
+      "name": "Casual T‑Shirts",
+      "category": "Casual wear",
+      "audience": ["men", "women", "kids", "unisex"],
+      "highlights": ["Cotton blends", "Solid & printed", "All sizes (subject to stock)"],
+      "priceNote": "Budget-friendly range available",
+      "tags": ["daily", "comfort", "topwear"],
+      "image": null
+    },
+    {
+      "id": "formal-shirts",
+      "name": "Formal Shirts",
+      "category": "Formal wear",
+      "audience": ["men"],
+      "highlights": ["Office-ready", "Slim & regular fit", "Multiple colors"],
+      "priceNote": "Ask for current price",
+      "tags": ["office", "shirt", "topwear"],
+      "image": null
+    },
+    {
+      "id": "formal-trousers",
+      "name": "Formal Trousers",
+      "category": "Formal wear",
+      "audience": ["men", "women"],
+      "highlights": ["Comfort fit", "Workwear essentials", "Multiple waist sizes"],
+      "priceNote": "Ask for current price",
+      "tags": ["office", "bottomwear"],
+      "image": null
+    },
+    {
+      "id": "sports-trackpants",
+      "name": "Sports Trackpants",
+      "category": "Sports wear",
+      "audience": ["men", "women", "kids", "unisex"],
+      "highlights": ["Breathable fabric", "Training & travel", "Solid colors"],
+      "priceNote": "Range depends on fabric and brand",
+      "tags": ["sports", "activewear", "bottomwear"],
+      "image": null
+    },
+    {
+      "id": "undergarments-basic",
+      "name": "Undergarments (Basics)",
+      "category": "Undergarments",
+      "audience": ["men", "women", "kids"],
+      "highlights": ["Everyday essentials", "Multiple sizes", "Ask for options"],
+      "priceNote": "Prices vary by type and pack",
+      "tags": ["essentials", "daily"],
+      "image": null
+    },
+    {
+      "id": "traditional-kurta-set",
+      "name": "Traditional Kurta Sets",
+      "category": "Traditional wear",
+      "audience": ["men", "women", "kids"],
+      "highlights": ["Festive-ready", "New designs", "Comfort fabrics"],
+      "priceNote": "Ask for current collection",
+      "tags": ["festival", "traditional"],
+      "image": null
+    },
+    {
+      "id": "festival-collection",
+      "name": "Festival Specific Collection",
+      "category": "Festival wear",
+      "audience": ["men", "women", "kids"],
+      "highlights": ["Seasonal styles", "Limited stock", "Special offers"],
+      "priceNote": "Offers may apply",
+      "tags": ["festival", "new"],
+      "image": null
+    },
+    {
+      "id": "school-uniforms",
+      "name": "School Uniforms",
+      "category": "School uniforms",
+      "audience": ["kids"],
+      "highlights": [
+        "Shirts, pants/skirts",
+        "House t-shirts (if available)",
+        "Bulk orders supported"
+      ],
+      "priceNote": "Share school name and size",
+      "tags": ["uniform", "bulk"],
+      "image": null
+    },
+    {
+      "id": "team-jerseys",
+      "name": "Jerseys (Team / Custom)",
+      "category": "Jerseys",
+      "audience": ["men", "women", "kids", "unisex"],
+      "highlights": ["Team orders", "Multiple sizes", "Bulk supported"],
+      "priceNote": "Depends on quantity & print",
+      "tags": ["sports", "bulk"],
+      "image": null
+    },
+    {
+      "id": "caps",
+      "name": "Caps",
+      "category": "Caps",
+      "audience": ["men", "women", "kids", "unisex"],
+      "highlights": ["Everyday & sports caps", "Different styles", "Ask for colors"],
+      "priceNote": "Affordable options available",
+      "tags": ["accessories"],
+      "image": null
+    }
+  ]
+}

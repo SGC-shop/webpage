@@ -1,0 +1,41 @@
+{
+  "lastUpdated": "2026-03-12",
+  "offers": [
+    {
+      "id": "festival-special",
+      "title": "Festival Specials",
+      "subtitle": "Traditional & festive collection",
+      "details": [
+        "New arrivals for festive season",
+        "Combo deals on selected items",
+        "Limited-time offers (ask in store / WhatsApp)"
+      ],
+      "badge": "Limited time",
+      "theme": "brand"
+    },
+    {
+      "id": "school-uniforms",
+      "title": "School Uniforms",
+      "subtitle": "Bulk & retail availability",
+      "details": [
+        "Uniform sets & accessories (as available)",
+        "Bulk orders supported for institutions",
+        "Contact for size chart and pricing"
+      ],
+      "badge": "Bulk orders",
+      "theme": "emerald"
+    },
+    {
+      "id": "clearance",
+      "title": "Clearance Corner",
+      "subtitle": "Season-end sale",
+      "details": [
+        "Selected styles at special prices",
+        "Sizes/stock limited",
+        "First come, first served"
+      ],
+      "badge": "Sale",
+      "theme": "slate"
+    }
+  ]
+}

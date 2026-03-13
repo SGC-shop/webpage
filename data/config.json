@@ -1,0 +1,51 @@
+{
+  "store": {
+    "name": "SHREE GANESH COLLECTION",
+    "tagline": "Ready-made clothing • Retail & bulk orders",
+    "address": "ADD YOUR SHOP ADDRESS HERE",
+    "hours": "Mon–Sun: 10:00 AM – 9:30 PM",
+    "phone": "+91 90000 00000",
+    "whatsapp": "+91 90000 00000",
+    "email": "yourstore@example.com",
+    "mapsUrl": "https://maps.google.com/?q=SHREE%20GANESH%20COLLECTION"
+  },
+  "order": {
+    "defaultCurrency": "INR",
+    "primaryChannel": "whatsapp",
+    "whatsappPrefillTemplate": "Hello SHREE GANESH COLLECTION,%0A%0AI want to order:%0A- Item: {{item}}%0A- Category: {{category}}%0A- Size: {{size}}%0A- Quantity: {{qty}}%0A%0APlease confirm availability and price.%0AThank you!",
+    "quickTemplatePlainText": "Hello SHREE GANESH COLLECTION,\n\nI want to order:\n- Item: <item name>\n- Category: <category>\n- Size: <size>\n- Quantity: <qty>\n\nPlease confirm availability and price.\nThank you!"
+  },
+  "thirdPartyOrderLinks": [
+    {
+      "id": "whatsapp",
+      "label": "WhatsApp order",
+      "type": "whatsapp",
+      "value": "+91 90000 00000",
+      "note": "Fastest way to order"
+    },
+    {
+      "id": "instagram",
+      "label": "Instagram DM",
+      "type": "url",
+      "value": "https://instagram.com/",
+      "note": "Share screenshots & sizes"
+    },
+    {
+      "id": "google-business",
+      "label": "Google Business",
+      "type": "url",
+      "value": "https://www.google.com/search?q=SHREE%20GANESH%20COLLECTION",
+      "note": "Reviews & enquiries"
+    },
+    {
+      "id": "phone",
+      "label": "Call to order",
+      "type": "phone",
+      "value": "+91 90000 00000",
+      "note": "Talk to the store"
+    }
+  ],
+  "about": {
+    "text": "SHREE GANESH COLLECTION is your one-stop store for ready-made clothing for all genders and ages — casual wear, formal wear, sports wear, undergarments, traditional wear, festival-specific outfits, school uniforms, jerseys, and caps. We also support bulk orders for schools, teams, events, and institutions."
+  }
+}
