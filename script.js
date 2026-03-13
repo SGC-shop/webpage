@@ -393,7 +393,10 @@ function applyConfig(cfg) {
 
   setText("#topbar-line", cfg?.store?.tagline || "Ready-made clothing • Bulk orders available");
 
-  const phone = cfg?.store?.phone || "";
+  const phones = Array.isArray(cfg?.store?.phoneNumbers)
+    ? cfg.store.phoneNumbers.filter(Boolean)
+    : [];
+  const phone = cfg?.store?.phone || phones[0] || "";
   const wa = cfg?.store?.whatsapp || phone || "";
   const mapsUrl = cfg?.store?.mapsUrl || "#";
   const email = cfg?.store?.email || "";
@@ -413,6 +416,12 @@ function applyConfig(cfg) {
 
   if (qs("#store-phone")) qs("#store-phone").textContent = phone || "—";
   if (qs("#store-whatsapp")) qs("#store-whatsapp").textContent = wa ? normalizePhone(wa) : "—";
+
+  const contactPhoneList = qs("#contact-phone-list");
+  if (contactPhoneList) {
+    const all = [phone, ...phones.filter((p) => p && p !== phone)];
+    contactPhoneList.textContent = all.length ? all.join(" / ") : phone || "";
+  }
 
   setText("#store-address", cfg?.store?.address || "—");
   setText("#store-hours", cfg?.store?.hours || "—");
