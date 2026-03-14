@@ -2,12 +2,12 @@
   "store": {
     "name": "SHREE GANESH COLLECTION",
     "tagline": "Ready-made clothing • Retail & bulk orders",
-    "address": "ADD YOUR SHOP ADDRESS HERE",
+    "address": "",
     "hours": "Mon-Sun: 10:00 AM - 9:30 PM",
     "phone": "+91 90000 00000",
     "phoneNumbers": ["+91 90000 00000", "+91 91111 11111"],
     "whatsapp": "+91 90000 00000",
-    "email": "yourstore@example.com",
+    "email": "shree.ganesh.collection.virar@gmail.com",
     "mapsUrl": "https://maps.google.com/?q=SHREE%20GANESH%20COLLECTION"
   },
   "order": {
