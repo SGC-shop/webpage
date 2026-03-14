@@ -440,7 +440,7 @@ function applyConfig(cfg) {
           const href = telLink(p);
           return `<a href="${escapeHtml(
             href
-          )}" class="block rounded-lg bg-white/80 px-3 py-1 text-xs font-semibold text-slate-900 ring-1 ring-slate-200 hover:bg-slate-100 dark:bg-white/5 dark:text-slate-100 dark:ring-white/10 dark:hover:bg-white/10">${escapeHtml(
+          )}" class="block rounded-lg bg-white/80 px-3 py-1 text-xs font-semibold text-slate-900 whitespace-nowrap ring-1 ring-slate-200 hover:bg-slate-100 dark:bg-white/5 dark:text-slate-100 dark:ring-white/10 dark:hover:bg-white/10">${escapeHtml(
             p
           )}</a>`;
         })
