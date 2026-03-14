@@ -106,19 +106,31 @@ function includesCI(haystack, needle) {
   return String(haystack).toLowerCase().includes(String(needle).toLowerCase());
 }
 
+const TAG_TONES = {
+  slate:
+    "bg-slate-100 text-slate-700 ring-slate-200 dark:bg-white/5 dark:text-slate-200 dark:ring-white/10",
+  brand:
+    "bg-brand-50 text-brand-800 ring-brand-200/60 dark:bg-brand-600/15 dark:text-brand-100 dark:ring-brand-500/25",
+  emerald:
+    "bg-emerald-50 text-emerald-800 ring-emerald-200/60 dark:bg-emerald-500/15 dark:text-emerald-100 dark:ring-emerald-400/25"
+};
+
 function renderTag(label, tone = "slate") {
-  const tones = {
-    slate:
-      "bg-slate-100 text-slate-700 ring-slate-200 dark:bg-white/5 dark:text-slate-200 dark:ring-white/10",
-    brand:
-      "bg-brand-50 text-brand-800 ring-brand-200/60 dark:bg-brand-600/15 dark:text-brand-100 dark:ring-brand-500/25",
-    emerald:
-      "bg-emerald-50 text-emerald-800 ring-emerald-200/60 dark:bg-emerald-500/15 dark:text-emerald-100 dark:ring-emerald-400/25"
-  };
-  const klass = tones[tone] || tones.slate;
+  const klass = TAG_TONES[tone] || TAG_TONES.slate;
   return `<span class="inline-flex items-center rounded-full px-3 py-1 text-xs ring-1 ${klass}">${escapeHtml(
     label
   )}</span>`;
+}
+
+function renderTagLink(label, href, tone = "slate") {
+  const base = TAG_TONES[tone] || TAG_TONES.slate;
+  const interactive =
+    "hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-400";
+  return `<a href="${escapeHtml(
+    href
+  )}" class="inline-flex items-center rounded-full px-3 py-1 text-xs ring-1 ${base} ${interactive}">${escapeHtml(
+    label
+  )}</a>`;
 }
 
 function offerThemeClasses(theme) {
@@ -253,10 +265,12 @@ function offerCardHtml(o) {
     .map((d) => `<li class="text-sm text-slate-700 dark:text-slate-200">• ${escapeHtml(d)}</li>`)
     .join("");
 
+  const idAttr = o.id ? `id="offer-${escapeHtml(o.id)}"` : "";
+
   return `
-    <article class="rounded-2xl bg-white p-6 ring-1 ${
-      cls.border
-    } shadow-md shadow-slate-900/5 hover:shadow-lg transition dark:bg-white/5 dark:shadow-none">
+    <article ${idAttr} class="rounded-2xl bg-white p-6 ring-1 ${
+    cls.border
+  } shadow-md shadow-slate-900/5 hover:shadow-lg transition dark:bg-white/5 dark:shadow-none">
       <div class="flex items-start justify-between gap-3">
         <div>
           <h3 class="text-lg font-black">${escapeHtml(o.title || "")}</h3>
@@ -420,7 +434,24 @@ function applyConfig(cfg) {
   const contactPhoneList = qs("#contact-phone-list");
   if (contactPhoneList) {
     const all = [phone, ...phones.filter((p) => p && p !== phone)];
-    contactPhoneList.textContent = all.length ? all.join(" / ") : phone || "";
+    if (all.length) {
+      contactPhoneList.innerHTML = all
+        .map((p, idx) => {
+          const label = idx === 0 ? "Primary" : "Alternate";
+          const href = telLink(p);
+          return `<div class="flex items-center justify-between gap-3">
+              <span class="text-slate-500 dark:text-slate-400 text-xs">${escapeHtml(label)}</span>
+              <a href="${escapeHtml(
+                href
+              )}" class="text-sm font-semibold text-slate-900 hover:text-brand-700 dark:text-slate-100 dark:hover:text-brand-200">${escapeHtml(
+            p
+          )}</a>
+            </div>`;
+        })
+        .join("");
+    } else {
+      contactPhoneList.textContent = phone || "";
+    }
   }
 
   setText("#store-address", cfg?.store?.address || "—");
@@ -453,14 +484,14 @@ function applyOffers(offersJson) {
     setText("#highlight-title", o.title || "Offers");
     setText("#highlight-desc", o.subtitle || "Check our latest deals and seasonal discounts.");
     const tags = [o.badge, ...(o.details || []).slice(0, 2)].filter(Boolean);
-    setHtml(
-      "#highlight-tags",
-      tags
-        .map((t, i) =>
-          renderTag(t, i === 0 ? (o.theme === "emerald" ? "emerald" : "brand") : "slate")
-        )
-        .join("")
-    );
+    const tagsHtml = tags
+      .map((t, i) => {
+        const tone = i === 0 ? (o.theme === "emerald" ? "emerald" : "brand") : "slate";
+        const target = o.id ? `#offer-${o.id}` : "#offers";
+        return renderTagLink(t, target, tone);
+      })
+      .join("");
+    setHtml("#highlight-tags", tagsHtml);
   } else {
     setText("#highlight-title", "New arrivals & offers");
     setText("#highlight-desc", "Message us for today’s availability and best deals.");
