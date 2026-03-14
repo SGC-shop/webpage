@@ -2,7 +2,7 @@
   "products": [
     {
       "id": "casual-tshirt",
-      "name": "Casual T‑Shirts",
+      "name": "Casual T-Shirts",
       "category": "Casual wear",
       "audience": ["men", "women", "kids", "unisex"],
       "highlights": ["Cotton blends", "Solid & printed", "All sizes (subject to stock)"],

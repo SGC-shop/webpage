@@ -2,13 +2,13 @@
   "store": {
     "name": "SHREE GANESH COLLECTION",
     "tagline": "Ready-made clothing • Retail & bulk orders",
-    "address": "",
-    "hours": "Mon-Sun: 10:00 AM - 9:30 PM",
-    "phone": "+91 90000 00000",
-    "phoneNumbers": ["+91 90000 00000", "+91 91111 11111"],
-    "whatsapp": "+91 90000 00000",
+    "address": "SHREE GANESH COLLECTION, shop no .1, priti apt, Vartak Rd, Vartak Ward, w, Virar, Vasai-Virar, Maharashtra 401303",
+    "hours": "Mon-Sun: 9:30 AM - 10:00 PM",
+    "phone": "+91 7021237990",
+    "phoneNumbers": ["+91 9967797144", "+91 7021237990", "+91 9890435547"],
+    "whatsapp": "+91 7021237990",
     "email": "shree.ganesh.collection.virar@gmail.com",
-    "mapsUrl": "https://maps.google.com/?q=SHREE%20GANESH%20COLLECTION"
+    "mapsUrl": "https://maps.app.goo.gl/Mv4MtjKHoLF1DQzb8"
   },
   "order": {
     "defaultCurrency": "INR",
@@ -21,28 +21,28 @@
       "id": "whatsapp",
       "label": "WhatsApp order",
       "type": "whatsapp",
-      "value": "+91 90000 00000",
+      "value": "https://wa.me/7021237990",
       "note": "Fastest way to order"
     },
     {
       "id": "instagram",
       "label": "Instagram DM",
       "type": "url",
-      "value": "https://instagram.com/",
+      "value": "https://www.instagram.com/shree_gc_?igsh=MTJudXFrbzY3MmQ2YQ==",
       "note": "Share screenshots & sizes"
     },
     {
       "id": "google-business",
       "label": "Google Business",
       "type": "url",
-      "value": "https://www.google.com/search?q=SHREE%20GANESH%20COLLECTION",
+      "value": "https://share.google/DkUBMB78ilqlyPlfo",
       "note": "Reviews & enquiries"
     },
     {
       "id": "phone",
       "label": "Call to order",
       "type": "phone",
-      "value": "+91 90000 00000",
+      "value": "+91 9967797144",
       "note": "Talk to the store"
     }
   ],
