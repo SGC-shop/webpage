@@ -125,8 +125,8 @@ function renderTag(label, tone = "slate") {
 function renderTagLink(label, href, tone = "slate") {
   const base = TAG_TONES[tone] || TAG_TONES.slate;
   const interactive =
-    "hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-400";
-  return `<a href="${escapeHtml(
+    "cursor-pointer hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-400";
+  return `<a href="${escapeHtml(href)}" data-target="${escapeHtml(
     href
   )}" class="inline-flex items-center rounded-full px-3 py-1 text-xs ring-1 ${base} ${interactive}">${escapeHtml(
     label
@@ -436,17 +436,13 @@ function applyConfig(cfg) {
     const all = [phone, ...phones.filter((p) => p && p !== phone)];
     if (all.length) {
       contactPhoneList.innerHTML = all
-        .map((p, idx) => {
-          const label = idx === 0 ? "Primary" : "Alternate";
+        .map((p) => {
           const href = telLink(p);
-          return `<div class="flex items-center justify-between gap-3">
-              <span class="text-slate-500 dark:text-slate-400 text-xs">${escapeHtml(label)}</span>
-              <a href="${escapeHtml(
-                href
-              )}" class="text-sm font-semibold text-slate-900 hover:text-brand-700 dark:text-slate-100 dark:hover:text-brand-200">${escapeHtml(
+          return `<a href="${escapeHtml(
+            href
+          )}" class="block rounded-lg bg-white/80 px-3 py-1 text-xs font-semibold text-slate-900 ring-1 ring-slate-200 hover:bg-slate-100 dark:bg-white/5 dark:text-slate-100 dark:ring-white/10 dark:hover:bg-white/10">${escapeHtml(
             p
-          )}</a>
-            </div>`;
+          )}</a>`;
         })
         .join("");
     } else {
@@ -492,6 +488,22 @@ function applyOffers(offersJson) {
       })
       .join("");
     setHtml("#highlight-tags", tagsHtml);
+
+    const tagsEl = qs("#highlight-tags");
+    if (tagsEl && !tagsEl.dataset.wired) {
+      tagsEl.addEventListener("click", (event) => {
+        const targetEl = event.target.closest("a[data-target]");
+        if (!targetEl) return;
+        const targetSel = targetEl.getAttribute("data-target") || "";
+        if (!targetSel) return;
+        const dest = document.querySelector(targetSel);
+        if (dest) {
+          event.preventDefault();
+          dest.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      });
+      tagsEl.dataset.wired = "true";
+    }
   } else {
     setText("#highlight-title", "New arrivals & offers");
     setText("#highlight-desc", "Message us for today’s availability and best deals.");
